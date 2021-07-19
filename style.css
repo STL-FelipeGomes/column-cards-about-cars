@@ -1,0 +1,171 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: hsl(0, 0%, 95%);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+#contents {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+
+/*
+    Session settings
+*/
+
+#contents section {
+	width: 20%;
+	padding: 50px;
+	color: #ffff;
+}
+
+/*
+  General settings
+*/
+
+#contents .header-contents {
+	margin-bottom: 35px;
+}
+
+#contents .title {
+	margin-bottom: 35px;
+	font: 400 40px 'Big Shoulders Display', cursive;
+	text-transform: uppercase;
+	color: hsl(0, 0%, 95%);
+}
+
+#contents .text {
+	max-width: 250px;
+	font: 400 15px 'Lexend Deca', sans-serif;
+	line-height: 30px;
+	letter-spacing: 1px;
+	color: hsla(0, 0%, 100%, 0.75);
+}
+
+#contents .link {
+	margin-top: 35px;
+}
+
+#contents .link a {
+	text-decoration: none;
+	padding: 15px;
+	background: hsl(0, 0%, 95%);
+	font: 400 15px 'Lexend Deca', sans-serif;
+	border-radius: 50px;
+	text-align: center;
+	transition: 0.8s;
+}
+
+#contents .link #link-sedan:hover {
+	background: hsl(31, 77%, 52%);
+	color: #ffff;
+}
+
+#contents .link #link-suv:hover {
+	background: hsl(184, 100%, 22%);
+	color: #ffff;
+}
+
+#contents .link #link-luxury:hover {
+	background: hsl(179, 100%, 13%);
+	color: #ffff;
+}
+
+/*
+  Seddan settings
+*/
+
+#contents #section-sedan {
+	background: hsl(31, 77%, 52%);
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#contents .link #link-sedan {
+	color: hsl(31, 77%, 52%);
+}
+
+/*
+  Suv settings 
+*/
+
+#contents #section-suv {
+	background: hsl(184, 100%, 22%);
+}
+
+#contents .link #link-suv {
+	color: hsl(184, 100%, 22%);
+}
+
+/*
+  Luxury settings
+*/
+
+#contents #section-luxury {
+	background: hsl(179, 100%, 13%);
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#contents .link #link-luxury {
+	color: hsl(179, 100%, 13%);
+}
+
+/*
+  For mobile
+*/
+
+@media (max-width: 1000px) {
+	#contents {
+		width: 100%;
+		margin: 50px 0;
+	}
+	/*
+    Section id's settings 
+  */
+	#contents #section-sedan {
+		width: 50%;
+		border-bottom-left-radius: unset;
+		border-top-right-radius: 10px;
+	}
+
+	#contents #section-suv {
+		width: 50%;
+	}
+
+	#contents #section-luxury {
+		width: 50%;
+		border-top-right-radius: unset;
+		border-bottom-left-radius: 10px;
+	}
+
+	/*
+    For mobile bigger than 500px
+  */
+
+	@media (min-width: 500px) {
+		#contents {
+			width: 100%;
+		}
+
+		#contents section {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-content: center;
+			justify-content: center;
+		}
+	}
+}
